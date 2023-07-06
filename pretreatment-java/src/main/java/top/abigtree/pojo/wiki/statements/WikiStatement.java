@@ -6,6 +6,7 @@ import java.util.Map;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import lombok.Data;
+import top.abigtree.pojo.wiki.enums.StatementsRankEnum;
 
 /**
  * @author Shuxin-Wang <wangshuxin662@gmail.com>
@@ -17,10 +18,20 @@ public class WikiStatement {
 
     String type;
 
-    String rank;
+    StatementsRankEnum rank;
 
-    Map<String, List<WikiStatement>> qualifiers;
+    Map<String, List<WikiSnak>> qualifiers;
 
-    @JsonProperty("datavalue")
-    WikiDataValue dataValue;
+    @JsonProperty("mainsnak")
+    WikiSnak mainSnak;
+
+    List<WikiReference> references;
+
+    public void setRank(String rank){
+        this.rank = StatementsRankEnum.getRank(rank);
+    }
+
+    public String getRank() {
+        return rank.getName();
+    }
 }

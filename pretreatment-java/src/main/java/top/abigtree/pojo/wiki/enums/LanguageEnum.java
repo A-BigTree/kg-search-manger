@@ -7,7 +7,7 @@ import java.util.HashMap;
  * Created on 2023/7/6
  */
 public enum LanguageEnum {
-    UN_KNOW("un-know"),
+    UN_CONFIG("un-config"),
 
     EN("en"),
 
@@ -36,7 +36,7 @@ public enum LanguageEnum {
     }
 
     public static LanguageEnum getLanguage(String langName){
-        return mapper.getOrDefault(langName, UN_KNOW);
+        return mapper.getOrDefault(langName, UN_CONFIG);
     }
 
     public String toString(){

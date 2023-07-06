@@ -6,6 +6,7 @@ import java.util.Map;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import lombok.Data;
+import top.abigtree.pojo.wiki.enums.DataTypeEnum;
 import top.abigtree.pojo.wiki.enums.EntityTypeEnum;
 import top.abigtree.pojo.wiki.statements.WikiStatement;
 
@@ -20,7 +21,7 @@ public class WikiDataModel {
     EntityTypeEnum type;
 
     @JsonProperty("datatype")
-    String dataType;
+    DataTypeEnum dataType;
 
     String title;
 
@@ -41,7 +42,22 @@ public class WikiDataModel {
 
     Map<String, List<WikiStatement>> claims;
 
+    @JsonProperty("sitelinks")
+    Map<String, WikiSiteLink> siteLinks;
+
     public void setType(String type) {
         this.type = EntityTypeEnum.getEntityType(type);
+    }
+
+    public void setDataType(String dataType){
+        this.dataType = DataTypeEnum.getDataType(dataType);
+    }
+
+    public String getDataType() {
+        return dataType.getType();
+    }
+
+    public String getType() {
+        return type.getType();
     }
 }

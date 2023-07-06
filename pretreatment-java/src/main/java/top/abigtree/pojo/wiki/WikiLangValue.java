@@ -16,4 +16,8 @@ public class WikiLangValue {
     public void setLanguage(String language) {
         this.language = LanguageEnum.getLanguage(language);
     }
+
+    public String getLanguage() {
+        return language.getName();
+    }
 }
