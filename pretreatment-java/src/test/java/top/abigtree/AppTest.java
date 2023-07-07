@@ -1,10 +1,6 @@
 package top.abigtree;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.InputStream;
 import java.net.URL;
 
 import org.junit.Test;
@@ -12,8 +8,8 @@ import org.junit.Test;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import top.abigtree.pojo.wiki.WikiDataModel;
-import top.abigtree.pojo.wiki.enums.LanguageEnum;
+import top.abigtree.wiki.pojo.WikiDataModel;
+import top.abigtree.wiki.enums.LanguageEnum;
 
 /**
  * @author Shuxin-Wang <wangshuxin662@gmail.com>
@@ -40,6 +36,10 @@ public class AppTest {
     public void json2Object2() throws IOException {
         URL url = this.getClass().getClassLoader().getResource("test.json");
 
-        System.out.println(mapper.readValue(url, WikiDataModel.class));
+        WikiDataModel wikiDataModel = mapper.readValue(url, WikiDataModel.class);
+
+        String json2 = mapper.writeValueAsString(wikiDataModel);
+
+        System.out.println(mapper.readValue(json2, WikiDataModel.class));
     }
 }

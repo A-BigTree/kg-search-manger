@@ -1,7 +1,9 @@
-package top.abigtree.pojo.wiki.statements;
+package top.abigtree.wiki.pojo.statements;
 
 import java.util.List;
 import java.util.Map;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import lombok.Data;
 
@@ -14,5 +16,8 @@ public class WikiReference {
     String hash;
 
     Map<String, List<WikiSnak>> snaks;
+
+    @JsonProperty("snaks-order")
+    List<String> snaksOrder;
 
 }

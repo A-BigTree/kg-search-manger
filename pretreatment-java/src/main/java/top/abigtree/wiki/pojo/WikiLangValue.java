@@ -1,7 +1,7 @@
-package top.abigtree.pojo.wiki;
+package top.abigtree.wiki.pojo;
 
 import lombok.Data;
-import top.abigtree.pojo.wiki.enums.LanguageEnum;
+import top.abigtree.wiki.enums.LanguageEnum;
 
 /**
  * @author Shuxin-Wang <wangshuxin662@gmail.com>
@@ -19,5 +19,9 @@ public class WikiLangValue {
 
     public String getLanguage() {
         return language.getName();
+    }
+
+    public LanguageEnum languageEnum(){
+        return language;
     }
 }

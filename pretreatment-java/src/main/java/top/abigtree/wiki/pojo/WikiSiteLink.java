@@ -1,4 +1,4 @@
-package top.abigtree.pojo.wiki;
+package top.abigtree.wiki.pojo;
 
 import java.util.List;
 

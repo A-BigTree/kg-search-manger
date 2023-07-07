@@ -1,18 +1,16 @@
-package top.abigtree.pojo.wiki.statements;
+package top.abigtree.wiki.pojo.statements.datavalue;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import lombok.Data;
-import lombok.EqualsAndHashCode;
-import top.abigtree.pojo.wiki.enums.EntityTypeEnum;
+import top.abigtree.wiki.enums.EntityTypeEnum;
 
 /**
  * @author Shuxin-Wang <wangshuxin662@gmail.com>
- * Created on 2023/7/6
+ * Created on 2023/7/7
  */
-@EqualsAndHashCode(callSuper = true)
 @Data
-public class EntityValue extends WikiDataValue{
+public class Entity implements AbstractValue{
     @JsonProperty("entity-type")
     EntityTypeEnum entityType;
 
@@ -28,4 +26,9 @@ public class EntityValue extends WikiDataValue{
     public String getEntityType() {
         return entityType.getType();
     }
+
+    public EntityTypeEnum entityTypeEnum(){
+        return entityType;
+    }
+
 }

@@ -1,15 +1,13 @@
-package top.abigtree.pojo.wiki.statements;
+package top.abigtree.wiki.pojo.statements.datavalue;
 
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 
 /**
  * @author Shuxin-Wang <wangshuxin662@gmail.com>
- * Created on 2023/7/6
+ * Created on 2023/7/7
  */
-@EqualsAndHashCode(callSuper = true)
 @Data
-public class GlobeValue extends AbstractValue{
+public class Globe implements AbstractValue{
     Double latitude;
 
     Double longitude;

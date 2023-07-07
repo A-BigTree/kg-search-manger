@@ -1,19 +1,16 @@
-package top.abigtree.pojo.wiki.statements;
+package top.abigtree.wiki.pojo.statements.datavalue;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import lombok.Data;
-import lombok.EqualsAndHashCode;
-import top.abigtree.pojo.wiki.enums.TimeUnitEnum;
+import top.abigtree.wiki.enums.TimeUnitEnum;
 
 /**
  * @author Shuxin-Wang <wangshuxin662@gmail.com>
- * Created on 2023/7/6
+ * Created on 2023/7/7
  */
-
-@EqualsAndHashCode(callSuper = true)
 @Data
-public class TimeValue extends AbstractValue {
+public class Time implements AbstractValue{
     String time;
 
     @JsonProperty("timezone")
@@ -34,5 +31,9 @@ public class TimeValue extends AbstractValue {
 
     public Integer getPrecision() {
         return precision.getIndex();
+    }
+
+    public TimeUnitEnum timeUnitEnum(){
+        return precision;
     }
 }

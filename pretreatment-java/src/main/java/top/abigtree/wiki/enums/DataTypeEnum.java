@@ -1,4 +1,4 @@
-package top.abigtree.pojo.wiki.enums;
+package top.abigtree.wiki.enums;
 
 import java.util.HashMap;
 
@@ -7,6 +7,7 @@ import java.util.HashMap;
  * Created on 2023/7/6
  */
 public enum DataTypeEnum {
+    DEFAULT("default", null),
     TIME("time", ValueTypeEnum.TIME),
 
     COMMONS_MEDIA("commonsMedia", ValueTypeEnum.STRING),

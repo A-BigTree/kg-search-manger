@@ -1,10 +1,10 @@
-package top.abigtree.pojo.wiki.statements;
+package top.abigtree.wiki.pojo.statements;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import lombok.Data;
-import top.abigtree.pojo.wiki.enums.DataTypeEnum;
-import top.abigtree.pojo.wiki.enums.SnakTypeEnum;
+import top.abigtree.wiki.enums.DataTypeEnum;
+import top.abigtree.wiki.enums.SnakTypeEnum;
 
 /**
  * @author Shuxin-Wang <wangshuxin662@gmail.com>
@@ -39,5 +39,13 @@ public class WikiSnak {
 
     public String getDataType(){
         return dataType.getType();
+    }
+
+    public DataTypeEnum dataTypeEnum(){
+        return dataType;
+    }
+
+    public SnakTypeEnum snakTypeEnum(){
+        return snakType;
     }
 }

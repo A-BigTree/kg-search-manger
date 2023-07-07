@@ -1,17 +1,15 @@
-package top.abigtree.pojo.wiki.statements;
+package top.abigtree.wiki.pojo.statements.datavalue;
 
 import java.math.BigDecimal;
 
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 
 /**
  * @author Shuxin-Wang <wangshuxin662@gmail.com>
- * Created on 2023/7/6
+ * Created on 2023/7/7
  */
-@EqualsAndHashCode(callSuper = true)
 @Data
-public class QuantityValue extends AbstractValue{
+public class Quantity implements AbstractValue{
     BigDecimal amount;
 
     BigDecimal upperBound;

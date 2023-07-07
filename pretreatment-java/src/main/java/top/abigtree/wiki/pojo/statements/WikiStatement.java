@@ -1,4 +1,4 @@
-package top.abigtree.pojo.wiki.statements;
+package top.abigtree.wiki.pojo.statements;
 
 import java.util.List;
 import java.util.Map;
@@ -6,7 +6,7 @@ import java.util.Map;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import lombok.Data;
-import top.abigtree.pojo.wiki.enums.StatementsRankEnum;
+import top.abigtree.wiki.enums.StatementsRankEnum;
 
 /**
  * @author Shuxin-Wang <wangshuxin662@gmail.com>
@@ -22,6 +22,9 @@ public class WikiStatement {
 
     Map<String, List<WikiSnak>> qualifiers;
 
+    @JsonProperty("qualifiers-order")
+    List<String> qualifiersOrder;
+
     @JsonProperty("mainsnak")
     WikiSnak mainSnak;
 
@@ -33,5 +36,9 @@ public class WikiStatement {
 
     public String getRank() {
         return rank.getName();
+    }
+
+    public StatementsRankEnum rankEnum(){
+        return rank;
     }
 }

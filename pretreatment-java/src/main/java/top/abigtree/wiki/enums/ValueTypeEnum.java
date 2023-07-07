@@ -1,4 +1,4 @@
-package top.abigtree.pojo.wiki.enums;
+package top.abigtree.wiki.enums;
 
 import java.util.HashMap;
 

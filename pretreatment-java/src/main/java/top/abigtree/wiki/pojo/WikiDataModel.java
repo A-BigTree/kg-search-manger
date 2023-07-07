@@ -1,4 +1,4 @@
-package top.abigtree.pojo.wiki;
+package top.abigtree.wiki.pojo;
 
 import java.util.List;
 import java.util.Map;
@@ -6,9 +6,9 @@ import java.util.Map;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import lombok.Data;
-import top.abigtree.pojo.wiki.enums.DataTypeEnum;
-import top.abigtree.pojo.wiki.enums.EntityTypeEnum;
-import top.abigtree.pojo.wiki.statements.WikiStatement;
+import top.abigtree.wiki.enums.DataTypeEnum;
+import top.abigtree.wiki.enums.EntityTypeEnum;
+import top.abigtree.wiki.pojo.statements.WikiStatement;
 
 /**
  * @author Shuxin-Wang <wangshuxin662@gmail.com>
@@ -21,7 +21,7 @@ public class WikiDataModel {
     EntityTypeEnum type;
 
     @JsonProperty("datatype")
-    DataTypeEnum dataType;
+    DataTypeEnum dataType = DataTypeEnum.DEFAULT;
 
     String title;
 
@@ -59,5 +59,13 @@ public class WikiDataModel {
 
     public String getType() {
         return type.getType();
+    }
+
+    public DataTypeEnum dataTypeEnum(){
+        return dataType;
+    }
+
+    public EntityTypeEnum entityTypeEnum(){
+        return type;
     }
 }
