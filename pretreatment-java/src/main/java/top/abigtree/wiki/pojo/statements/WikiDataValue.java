@@ -24,5 +24,5 @@ import lombok.Data;
 })
 @Data
 public class WikiDataValue {
-    String type;
+    private String type;
 }

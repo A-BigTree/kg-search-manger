@@ -8,14 +8,14 @@ import lombok.Data;
  */
 @Data
 public class Globe implements AbstractValue{
-    Double latitude;
+    private Double latitude;
 
-    Double longitude;
+    private Double longitude;
 
     @Deprecated
-    Object altitude;
+    private Object altitude;
 
-    Double precision;
+    private Double precision;
 
-    String globe;
+    private String globe;
 }

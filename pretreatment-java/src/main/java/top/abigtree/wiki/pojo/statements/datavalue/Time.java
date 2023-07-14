@@ -11,19 +11,19 @@ import top.abigtree.wiki.enums.TimeUnitEnum;
  */
 @Data
 public class Time implements AbstractValue{
-    String time;
+    private String time;
 
     @JsonProperty("timezone")
-    int timeZone;
+    private Integer timeZone;
 
-    int before;
+    private Integer before;
 
-    int after;
+    private Integer after;
 
     @JsonProperty("calendarmodel")
-    String calendarModel;
+    private String calendarModel;
 
-    TimeUnitEnum precision;
+    private TimeUnitEnum precision;
 
     public void setPrecision(Integer precision) {
         this.precision = TimeUnitEnum.getTimeUnit(precision);

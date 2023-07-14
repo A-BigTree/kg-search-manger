@@ -14,21 +14,21 @@ import top.abigtree.wiki.enums.StatementsRankEnum;
  */
 @Data
 public class WikiStatement {
-    String id;
+    private String id;
 
-    String type;
+    private String type;
 
-    StatementsRankEnum rank;
+    private StatementsRankEnum rank;
 
-    Map<String, List<WikiSnak>> qualifiers;
+    private Map<String, List<WikiSnak>> qualifiers;
 
     @JsonProperty("qualifiers-order")
-    List<String> qualifiersOrder;
+    private List<String> qualifiersOrder;
 
     @JsonProperty("mainsnak")
-    WikiSnak mainSnak;
+    private WikiSnak mainSnak;
 
-    List<WikiReference> references;
+    private List<WikiReference> references;
 
     public void setRank(String rank){
         this.rank = StatementsRankEnum.getRank(rank);

@@ -7,16 +7,12 @@ import java.util.HashMap;
  * Created on 2023/7/6
  */
 public enum ValueTypeEnum {
+    UN_KNOW("un-know"),
     STRING("string"),
-
     WIKI_BASE_ENTITY_ID("wikibase-entityid"),
-
     GLOBE_COORDINATE("globecoordinate"),
-
     MONOLINGUAL_TEXT("monolingualtext"),
-
     QUANTITY("quantity"),
-
     TIME("time")
     ;
 
@@ -40,7 +36,7 @@ public enum ValueTypeEnum {
     }
 
     public static ValueTypeEnum getValueType(String type){
-        return mapper.getOrDefault(type, null);
+        return mapper.getOrDefault(type, UN_KNOW);
     }
 
     public String toString(){

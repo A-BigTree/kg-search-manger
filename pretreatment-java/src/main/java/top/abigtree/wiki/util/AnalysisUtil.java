@@ -27,7 +27,7 @@ public class AnalysisUtil {
     public final static ObjectMapper INSTANCE = new ObjectMapper();
 
     public static Object convertToObject(String json, Class<?> clazz) {
-        Object res = null;
+        Object res;
         try {
             res = INSTANCE.readValue(json, clazz);
         } catch (JsonProcessingException e) {
@@ -38,7 +38,7 @@ public class AnalysisUtil {
     }
 
     public static String covertToString(Object target) {
-        String res = null;
+        String res;
         try {
             res = INSTANCE.writeValueAsString(target);
         } catch (JsonProcessingException e) {
@@ -49,7 +49,7 @@ public class AnalysisUtil {
     }
 
     public static Object convertToObject(URL url, Class<?> clazz) {
-        Object res = null;
+        Object res;
         try {
             res = INSTANCE.readValue(url, clazz);
         } catch (JsonProcessingException e) {

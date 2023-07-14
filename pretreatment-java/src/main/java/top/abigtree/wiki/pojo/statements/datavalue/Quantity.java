@@ -10,11 +10,11 @@ import lombok.Data;
  */
 @Data
 public class Quantity implements AbstractValue{
-    BigDecimal amount;
+    private BigDecimal amount;
 
-    BigDecimal upperBound;
+    private BigDecimal upperBound;
 
-    BigDecimal lowerBound;
+    private BigDecimal lowerBound;
 
-    String unit;
+    private String unit;
 }

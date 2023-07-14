@@ -8,7 +8,7 @@ import lombok.Data;
  */
 @Data
 public class MonText implements AbstractValue{
-    String text;
+    private String text;
 
-    String language;
+    private String language;
 }

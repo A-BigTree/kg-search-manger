@@ -16,34 +16,34 @@ import top.abigtree.wiki.pojo.statements.WikiStatement;
  */
 @Data
 public class WikiDataModel {
-    String id;
+    private String id;
 
-    EntityTypeEnum type;
+    private EntityTypeEnum type;
 
     @JsonProperty("datatype")
-    DataTypeEnum dataType = DataTypeEnum.DEFAULT;
+    private DataTypeEnum dataType = DataTypeEnum.DEFAULT;
 
-    String title;
+    private String title;
 
     @JsonProperty("pageid")
-    Integer pageId;
+    private Integer pageId;
 
-    Integer ns;
+    private Integer ns;
 
-    Long lastrevid;
+    private Long lastrevid;
 
-    String modified;
+    private String modified;
 
-    Map<String, WikiLangValue> labels;
+    private Map<String, WikiLangValue> labels;
 
-    Map<String, WikiLangValue> descriptions;
+    private Map<String, WikiLangValue> descriptions;
 
-    Map<String, List<WikiLangValue>> aliases;
+    private Map<String, List<WikiLangValue>> aliases;
 
-    Map<String, List<WikiStatement>> claims;
+    private Map<String, List<WikiStatement>> claims;
 
     @JsonProperty("sitelinks")
-    Map<String, WikiSiteLink> siteLinks;
+    private Map<String, WikiSiteLink> siteLinks;
 
     public void setType(String type) {
         this.type = EntityTypeEnum.getEntityType(type);

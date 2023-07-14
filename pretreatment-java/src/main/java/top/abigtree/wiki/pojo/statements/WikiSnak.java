@@ -13,17 +13,17 @@ import top.abigtree.wiki.enums.SnakTypeEnum;
 @Data
 public class WikiSnak {
     @JsonProperty("snaktype")
-    SnakTypeEnum snakType;
+    private SnakTypeEnum snakType;
 
-    String hash;
+    private String hash;
 
-    String property;
+    private String property;
 
     @JsonProperty("datatype")
-    DataTypeEnum dataType;
+    private DataTypeEnum dataType;
 
     @JsonProperty("datavalue")
-    WikiDataValue dataValue;
+    private WikiDataValue dataValue;
 
     public void setSnakType(String snakType) {
         this.snakType = SnakTypeEnum.getSnakType(snakType);

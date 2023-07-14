@@ -3,6 +3,7 @@ package top.abigtree.wiki.pojo.analysis;
 import java.util.List;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import top.abigtree.wiki.enums.LanguageEnum;
@@ -14,16 +15,17 @@ import top.abigtree.wiki.enums.LanguageEnum;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class EntityBasicData {
-    Integer id;
+    private Integer id;
 
-    LanguageEnum language;
+    private LanguageEnum language;
 
-    String lang;
+    private String lang;
 
-    String label;
+    private String label;
 
-    String description;
+    private String description;
 
-    List<String> aliases;
+    private List<String> aliases;
 }

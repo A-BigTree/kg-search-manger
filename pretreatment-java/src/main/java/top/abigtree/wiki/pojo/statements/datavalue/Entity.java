@@ -12,12 +12,12 @@ import top.abigtree.wiki.enums.EntityTypeEnum;
 @Data
 public class Entity implements AbstractValue{
     @JsonProperty("entity-type")
-    EntityTypeEnum entityType;
+    private EntityTypeEnum entityType;
 
-    String id;
+    private String id;
 
     @JsonProperty("numeric-id")
-    Integer numericId;
+    private Integer numericId;
 
     public void setEntityType(String entityType) {
         this.entityType = EntityTypeEnum.getEntityType(entityType);
