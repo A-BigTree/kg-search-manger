@@ -2,10 +2,13 @@ package top.abigtree.wiki.enums;
 
 import java.util.HashMap;
 
+import lombok.Getter;
+
 /**
  * @author Shuxin-Wang <wangshuxin662@gmail.com>
  * Created on 2023/7/6
  */
+@Getter
 public enum EntityTypeEnum {
     ITEM("item"),
 

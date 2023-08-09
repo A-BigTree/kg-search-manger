@@ -2,10 +2,13 @@ package top.abigtree.wiki.enums;
 
 import java.util.HashMap;
 
+import lombok.Getter;
+
 /**
  * @author Shuxin-Wang <wangshuxin662@gmail.com>
  * Created on 2023/7/6
  */
+@Getter
 public enum DataTypeEnum {
     DEFAULT("default", ValueTypeEnum.UN_KNOW),
     TIME("time", ValueTypeEnum.TIME),
@@ -43,14 +46,6 @@ public enum DataTypeEnum {
     DataTypeEnum(String type, ValueTypeEnum valueType){
         this.type = type;
         this.valueType = valueType;
-    }
-
-    public String getType(){
-        return type;
-    }
-
-    public ValueTypeEnum getValueType(){
-        return valueType;
     }
 
     public static DataTypeEnum getDataType(String type){
