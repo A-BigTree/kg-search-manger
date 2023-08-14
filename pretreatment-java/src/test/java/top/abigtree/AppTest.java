@@ -1,17 +1,14 @@
 package top.abigtree;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import lombok.extern.slf4j.Slf4j;
+import org.junit.Test;
+import top.abigtree.wiki.enums.LanguageEnum;
+import top.abigtree.wiki.pojo.WikiDataModel;
+import top.abigtree.wiki.util.AnalysisUtil;
+
 import java.io.IOException;
 import java.net.URL;
-
-import org.junit.Test;
-
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-
-import lombok.extern.slf4j.Slf4j;
-import top.abigtree.wiki.pojo.WikiDataModel;
-import top.abigtree.wiki.enums.LanguageEnum;
-import top.abigtree.wiki.util.AnalysisUtil;
 
 /**
  * @author Shuxin-Wang <wangshuxin662@gmail.com>
