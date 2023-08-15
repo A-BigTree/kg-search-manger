@@ -26,8 +26,8 @@ import top.abigtree.wiki.pojo.analysis.EntityBasicData;
 public class AnalysisUtil {
     public final static ObjectMapper INSTANCE = new ObjectMapper();
 
-    public static Object convertToObject(String json, Class<?> clazz) {
-        Object res;
+    public static <T> T convertToObject(String json, Class<? extends T> clazz) {
+        T res;
         try {
             res = INSTANCE.readValue(json, clazz);
         } catch (JsonProcessingException e) {
@@ -48,8 +48,8 @@ public class AnalysisUtil {
         return res;
     }
 
-    public static Object convertToObject(URL url, Class<?> clazz) {
-        Object res;
+    public static <T> T convertToObject(URL url, Class<? extends T> clazz) {
+        T res;
         try {
             res = INSTANCE.readValue(url, clazz);
         } catch (JsonProcessingException e) {
@@ -61,8 +61,8 @@ public class AnalysisUtil {
         return res;
     }
 
-    public static Object convertToObject(File file, Class<?> clazz) {
-        Object res;
+    public static <T> T convertToObject(File file, Class<? extends T> clazz) {
+        T res;
         try {
             res = INSTANCE.readValue(file, clazz);
         } catch (JsonProcessingException e) {

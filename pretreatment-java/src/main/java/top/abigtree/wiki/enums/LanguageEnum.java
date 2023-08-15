@@ -8,14 +8,11 @@ import java.util.HashMap;
  */
 public enum LanguageEnum {
     UN_CONFIG("un-config"),
-
     EN("en"),
-
     CN("zh"),
-
     FR("fr"),
-
-    IT("it");
+    IT("it"),
+    ;
 
     private final static HashMap<String, LanguageEnum> mapper = new HashMap<>();
 
